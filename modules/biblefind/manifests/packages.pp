@@ -2,6 +2,7 @@ class biblefind::packages {
   
   include stdlib
   include apt
+  include mongodb
 
   class { 'mongodb': 
     use_10gen => true,
