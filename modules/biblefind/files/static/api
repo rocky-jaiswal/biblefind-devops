@@ -1,6 +1,6 @@
 server {
     listen   80;
-    server_name api.biblefind.in; 
+    server_name 37.139.26.235; 
 
     access_log  /var/log/nginx/api.access.log;
 
