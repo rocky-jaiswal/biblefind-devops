@@ -1,4 +1,4 @@
-class patience::nginx {
+class biblefind::nginx {
   
   include stdlib
   include apt

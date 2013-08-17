@@ -1,4 +1,4 @@
-class patience::node {
+class biblefind::packages {
   
   include stdlib
   include apt

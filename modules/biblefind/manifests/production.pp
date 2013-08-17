@@ -1,7 +1,7 @@
-class patience::production {
+class biblefind::production {
 
-  include patience::nginx
-  include patience::packages
+  include biblefind::nginx
+  include biblefind::packages
   include ufw
 
   Exec {
