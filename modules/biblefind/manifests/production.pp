@@ -3,6 +3,11 @@ class biblefind::production {
   include biblefind::nginx
   include biblefind::packages
   include ufw
+  include mongodb
+
+  class { 'mongodb': 
+    use_10gen => true,
+  }
 
   Exec {
     path => "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",

@@ -2,11 +2,6 @@ class biblefind::packages {
   
   include stdlib
   include apt
-  include mongodb
-
-  class { 'mongodb': 
-    use_10gen => true,
-  }
 
   apt::ppa { "ppa:chris-lea/node.js": 
     before  => Package["nodejs"],
