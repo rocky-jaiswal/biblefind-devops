@@ -37,14 +37,14 @@ class biblefind::nginx {
   file { "unwanted-default":
     path    => "/etc/nginx/sites-enabled/default",
     ensure  => absent,
-    before => File["patience-avaliable"]
+    before => File["biblefind-avaliable"]
   }
 
   file { "biblefind-avaliable":
     path    => "/etc/nginx/sites-available/biblefind",
     ensure  => present,
     mode    => 0644,
-    source  => "puppet:///modules/patience/static/biblefind",
+    source  => "puppet:///modules/biblefind/static/biblefind",
     require => File["logfile1", "unwanted-default"],
     notify  => Service["nginx"],
   }
@@ -61,7 +61,7 @@ class biblefind::nginx {
     path    => "/etc/nginx/sites-available/api",
     ensure  => present,
     mode    => 0644,
-    source  => "puppet:///modules/patience/static/api",
+    source  => "puppet:///modules/biblefind/static/api",
     require => File["logfile2", "unwanted-default"],
     notify  => Service["nginx"],
   }
