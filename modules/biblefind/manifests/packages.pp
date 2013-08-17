@@ -4,7 +4,9 @@ class biblefind::packages {
   include apt
   include mongodb
 
-  class mongodb
+  class mongodb {
+    init => 'sysv',
+  }
 
   package { "openjdk-7-jdk": 
     ensure => latest,
